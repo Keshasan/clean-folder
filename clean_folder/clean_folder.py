@@ -41,10 +41,10 @@ def recursive_sort_directory(path: Path, main_dir: Path):
             recursive_sort_thread.join()
     else:
 
-        sorting_thread = threading.Thread(
+        sorting_file_thread = threading.Thread(
             target=sort_file, args=(path, main_dir))
-        sorting_thread.start()
-        sorting_thread.join()
+        sorting_file_thread.start()
+        sorting_file_thread.join()
 
 
 def normalize(name: str):
